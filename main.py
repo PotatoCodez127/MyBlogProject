@@ -13,10 +13,11 @@ from datetime import date
 from dotenv import load_dotenv, find_dotenv
 import os
 
-dotenv_path = find_dotenv()
-load_dotenv(dotenv_path)
+# dotenv_path = find_dotenv()
+load_dotenv()
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get(Flask_SECRET_KEY)
+app.config['SECRET_KEY'] = os.getenv("Flask_SECRET_KEY")
+print(os.getenv("Flask_SECRET_KEY"))
 Bootstrap5(app)
 ckeditor = CKEditor(app)
 
