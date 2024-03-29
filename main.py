@@ -2,6 +2,7 @@ import datetime
 
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap5
+import smtplib
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
@@ -10,8 +11,9 @@ from wtforms import StringField, SubmitField, validators
 from wtforms.validators import DataRequired, URL
 from flask_ckeditor import CKEditor, CKEditorField
 from datetime import date
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 import os
+
 
 # dotenv_path = find_dotenv()
 load_dotenv()
@@ -20,6 +22,10 @@ app.config['SECRET_KEY'] = os.getenv("Flask_SECRET_KEY")
 print(os.getenv("Flask_SECRET_KEY"))
 Bootstrap5(app)
 ckeditor = CKEditor(app)
+
+
+OWN_EMAIL = "YOUR OWN EMAIL ADDRESS"
+OWN_PASSWORD = "YOUR EMAIL ADDRESS PASSWORD"
 
 
 # CREATE DATABASE
@@ -108,6 +114,7 @@ def edit_post(post_id):
         author=post.author,
         body=post.body
     )
+
     heading = "Edit Post"
     if edit_form.validate_on_submit():
         post.title = edit_form.title.data
@@ -135,10 +142,21 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("contact.html")
+    if request.method == "POST":
+        data = request.form
+        send_email(data["name"], data["email"], data["phone"], data["message"])
+        return render_template("contact.html", msg_sent=True)
+    return render_template("contact.html", msg_sent=False)
+
+def send_email(name, email, phone, message):
+    email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(OWN_EMAIL, OWN_PASSWORD)
+        connection.sendmail(OWN_EMAIL, OWN_EMAIL, email_message)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5003)
+    app.run(debug=True)
