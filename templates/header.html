@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Jeandre's Blog</title>
     {% block styles %}
     <!-- Load Bootstrap-Flask CSS here -->
     {{ bootstrap.load_css() }}
@@ -67,6 +66,31 @@
                 >Home</a
               >
             </li>
+            <!-- Only show Login/Register if user is logged out. Otherwise show "Log Out" -->
+            {% if not current_user.is_authenticated: %}
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
+                href="{{ url_for('login') }}"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
+                href="{{ url_for('register') }}"
+                >Register</a
+              >
+            </li>
+            {% else: %}
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
+                href="{{ url_for('logout') }}"
+                >Log Out</a
+              >
+            </li>
+            {% endif %}
             <li class="nav-item">
               <a
                 class="nav-link px-lg-3 py-3 py-lg-4"
@@ -85,3 +109,5 @@
         </div>
       </div>
     </nav>
+  </body>
+</html>
