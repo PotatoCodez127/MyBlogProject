@@ -79,14 +79,12 @@ This is a project to show the usage of various libraries revolving mainly around
 
 ### Built With
 
-* [![Python][Python]][Python-url]
-* [![React][Flask]][Flask-url]
-* [![Vue][SQLAlchemy]][SQLAlchemy-url]
-* [![Angular][Jinja]][Jinja-url]
-* [![Svelte][werkzeug]][werkzeug-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Python]][Python-url]
+* [![Flask]][Flask-url]
+* [![SQLAlchemy]][SQLAlchemy-url]
+* [![Jinja]][Jinja-url]
+* [![werkzeug]][werkzeug-url]
+* [![Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,7 +219,7 @@ Project Link: [https://github.com/PotatoCodez127/MyBlogProject](https://github.c
 [SQLAlchemy-url]: https://vuejs.org/
 [Jinja]: https://img.shields.io/badge/Jinja-990000?style=for-the-badge&logo=Jinja&
 [Jinja-url]: https://jinja.palletsprojects.com/en/3.1.x/
-[werkzeug]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[werkzeug]: https://img.shields.io/badge/Werkzeug-f1c232?style=for-the-badge&logo=werkzeug&
 [werkzeug-url]: https://werkzeug.palletsprojects.com/en/3.0.x/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
