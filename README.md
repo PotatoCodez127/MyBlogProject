@@ -188,11 +188,11 @@ Project Link: [https://github.com/PotatoCodez127/MyBlogProject](https://github.c
 [linkedin-url]: www.linkedin.com/in/jeandre-coetzee-642a892b8
 [product-screenshot]: Images/image.png
 [Python]: https://img.shields.io/badge/python-dfdfdf?style=for-the-badge&logo=python&
-[Python-url]: https://nextjs.org/
+[Python-url]: https://www.python.org/
 [Flask]: https://img.shields.io/badge/Flask-313131?style=for-the-badge&logo=flask&
-[Flask-url]: https://reactjs.org/
+[Flask-url]: https://flask-login.readthedocs.io/en/latest/
 [SQLAlchemy]: https://img.shields.io/badge/SQLAlchemy-506942?style=for-the-badge&logo=SQLAlchemy&
-[SQLAlchemy-url]: https://vuejs.org/
+[SQLAlchemy-url]: https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/
 [Jinja]: https://img.shields.io/badge/Jinja-990000?style=for-the-badge&logo=Jinja&
 [Jinja-url]: https://jinja.palletsprojects.com/en/3.1.x/
 [werkzeug]: https://img.shields.io/badge/Werkzeug-f1c232?style=for-the-badge&logo=werkzeug&
