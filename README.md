@@ -72,7 +72,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `PotatoCodez127`, `MyBlogProject`, ``, `linkedin_username`, `jeandre.c127@gmail.com_client`, `jeandre.c127@gmail.com`, `My Flask Blog Project`, `This is a project to show the usage of various libraries revolving mainly around Flask and Bootstrap.     See <a href="#built-with"> _here_ </a> for all libraries and frameworks used in this project.`
+This is a project to show the usage of various libraries revolving mainly around Flask and Bootstrap.     See <a href="#built-with"> _here_ </a> for all libraries and frameworks used in this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
